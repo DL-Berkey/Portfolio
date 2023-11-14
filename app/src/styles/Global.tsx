@@ -17,6 +17,10 @@ const Global = createGlobalStyle`
         font-family: "Pretendard-Regular"
     }
 
+    html {
+        --bg-color: #9BABB8
+    }
+
     a {
         color: inherit;
         text-decoration: none;
