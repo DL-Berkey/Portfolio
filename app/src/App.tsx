@@ -1,9 +1,13 @@
-import { useState } from "react";
+import Header from "./components/Layouts/Header";
+import Content from "./components/Layouts/Content";
 
 function App() {
-    const [count, setCount] = useState(0);
-
-    return <div>안녕</div>;
+    return (
+        <>
+            <Header />
+            <Content />
+        </>
+    );
 }
 
 export default App;
