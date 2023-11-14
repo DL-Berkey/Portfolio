@@ -17,9 +17,20 @@ const Global = createGlobalStyle`
         font-family: "Pretendard-Regular"
     }
 
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
     body {
         width: 1920px;
         height: 929px;
+
+        font-size: 24px;
+    }
+
+    #root {
+        height: 100%;
     }
 `;
 
