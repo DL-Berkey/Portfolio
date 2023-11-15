@@ -20,6 +20,10 @@ const Global = createGlobalStyle`
     html {
         --green: #AAC8A7;
         --red: #FF9B9B;
+        --front: #A1CCD1;
+        --back: #E9B384;
+        --a_blue: #82A0D8;
+
         --dark-01: ##1d2125;
         --dark-02: #212529;
 
