@@ -34,6 +34,8 @@ const Wrapper = styled.header`
     border-bottom: 1px solid gray;
     background: white;
 
+    z-index: 1;
+
     & ul {
         display: flex;
         justify-content: center;
