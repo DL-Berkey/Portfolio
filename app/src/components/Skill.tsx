@@ -1,61 +1,53 @@
 import styled, { css } from "styled-components";
 
+import { Article, Title } from "../styles";
+
 const Skill = () => {
     return (
-        <Wrapper>
-            <h2>기술</h2>
+        <Wrapper id="skill">
+            <Title>기술</Title>
             <span>강점</span>
             <SkillContainer>
                 <p>언어</p>
                 <Row>
-                    <Column isStrong={true}>Javascript</Column>
+                    <Column $is_strong={"true"}>Javascript</Column>
                     <Seperator>,</Seperator>
-                    <Column isStrong={true}>Typescript</Column>
+                    <Column $is_strong={"true"}>Typescript</Column>
                 </Row>
                 <p>프론트엔드</p>
                 <Row>
-                    <Column isStrong={true}>React</Column>
+                    <Column $is_strong={"true"}>React</Column>
                     <Seperator>,</Seperator>
-                    <Column isStrong={true}>Recoil</Column>
+                    <Column $is_strong={"true"}>Recoil</Column>
                     <Seperator>,</Seperator>
                     <Column>React-Query</Column>
                     <Seperator>,</Seperator>
-                    <Column isStrong={true}>React-Router-Dom</Column>
-                    <br />
-                    <Column isStrong={true}>Styled-Components</Column>
+                    <Column $is_strong={"true"}>React-Router-Dom</Column>
+                    {/* <br /> */}
+                    <Column $is_strong={"true"}>Styled-Components</Column>
                     <Seperator>,</Seperator>
                     <Column>Vite</Column>
                 </Row>
                 <p>백엔드</p>
                 <Row>
-                    <Column isStrong={true}>Express</Column>
+                    <Column $is_strong={"true"}>Express</Column>
                     <Seperator>,</Seperator>
                     <Column>Prisma</Column>
                 </Row>
                 <p>기타</p>
                 <Row>
-                    <Column isStrong={true}>Git</Column>
+                    <Column $is_strong={"true"}>Git</Column>
                     <Seperator>,</Seperator>
                     <Column>Firebase</Column>
                 </Row>
             </SkillContainer>
+            <hr />
         </Wrapper>
     );
 };
 
-const Wrapper = styled.article`
-    width: 30%;
-
-    padding: 0 1%;
-
-    border-bottom: 2px solid rgba(166, 166, 166, 0.5);
-
-    & h2 {
-        margin-bottom: 2%;
-
-        font-size: 3rem;
-    }
-
+const Wrapper = styled(Article)`
+    // 강점
     & > span {
         position: relative;
 
@@ -64,7 +56,7 @@ const Wrapper = styled.article`
         font-size: 1.2rem;
     }
 
-    // 선
+    // 강점 선
     & > span::after {
         content: "";
 
@@ -89,12 +81,15 @@ const SkillContainer = styled.div`
 `;
 
 const Row = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+
     font-size: 1.6rem;
 
     margin-bottom: 4%;
 `;
 
-const Column = styled.span<{ isStrong?: boolean }>`
+const Column = styled.span<{ $is_strong?: "true" }>`
     position: relative;
 
     font-size: 1.4rem;
@@ -111,15 +106,10 @@ const Column = styled.span<{ isStrong?: boolean }>`
         height: 3px;
 
         ${(props) =>
-            props.isStrong &&
+            props.$is_strong &&
             css`
                 background-color: var(--green);
             `}
-    }
-
-    // 컬럼 간 여백
-    & + & {
-        margin-left: 4%;
     }
 `;
 

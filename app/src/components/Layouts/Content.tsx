@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 import Introduction from "../Introduction";
 import Skill from "../Skill";
+import Project from "../project/Project";
 
 const Content = () => {
     return (
         <Wrapper>
             <Introduction />
             <Skill />
+            <Project />
         </Wrapper>
     );
 };
