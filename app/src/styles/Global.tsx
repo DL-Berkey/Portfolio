@@ -18,12 +18,20 @@ const Global = createGlobalStyle`
     }
 
     html {
-        --bg-color: #9BABB8
+        --green: #AAC8A7;
+        --red: #FF9B9B;
+        --dark-01: ##1d2125;
+        --dark-02: #212529;
+
     }
 
     a {
         color: inherit;
         text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
     }
 
     body {
