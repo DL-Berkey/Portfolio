@@ -5,8 +5,6 @@ export const Article = styled.article`
 
     padding: 0 1%;
 
-    border-bottom: 2px solid rgba(166, 166, 166, 0.5);
-
     & + & {
         margin-top: 3%;
     }
